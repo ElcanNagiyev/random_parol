@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            border: 1px black solid;
+            width: 200px;
+            height: 20px;
+        }
+        input{
+            width: 50px;
+        }
+        h1{
+            display: inline;
+        }
+
+    </style>
+
+</head>
+<body>
+    <input type="number">
+    <h1> symbol</h1>
+    <p></p>
+    <button>New Parol</button>
+
+    <script>
+        let btn=document.querySelector('button');
+        let p=document.querySelector('p');
+        let input=document.querySelector('input');
+
+
+        input.addEventListener('keyup',(event)=>{
+            n=event.target.value
+        })
+
+ 
+
+        btn.addEventListener('click',function(){
+
+            let arr1=[0,1,2,3,4,5,6,7,8,9]
+            let arr2=['q','w','e','r','t','y','u','i','o','p']
+            let arr3=['a','s','d','f','g','h','j','k','l']
+            let arr4=['z','x','c','v','b','n','m']
+
+            let array=((arr1.concat(arr2)).concat(arr3)).concat(arr4);
+
+            s=''
+
+            for(let i=0; i<n; i++){
+                s=s+array[Math.round(Math.random()*35)]
+            }
+
+            p.innerText=`${s}`
+        })
+
+    </script>
+</body>
+</html>
